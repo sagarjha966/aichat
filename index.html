@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doorstep Repair Hub | Electrical & Appliance Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home">Doorstep Repair Hub</a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#book-service">Book Service</a></li>
+            <li><a href="#ask-question">Ask Question</a></li>
+            <li><a href="#amc-plans">AMC Plans</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-content">
+          <p class="eyebrow">Complete Electrical & Home Appliance Repair & Installation Service at Your Doorstep</p>
+          <h1>Fast, trusted & affordable service across Jhansi and nearby areas.</h1>
+          <p>
+            Book expert technicians for AC, refrigerator, TV, and electrical work with same-day
+            response, transparent pricing, and live service tracking.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#book-service">Book Now</a>
+            <a class="btn btn-emergency" href="tel:+919876543210">Emergency Repair</a>
+          </div>
+          <ul class="highlights">
+            <li>AC Installation & Servicing</li>
+            <li>Refrigerator Repair</li>
+            <li>New TV Installation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <h2>Services</h2>
+          <p class="section-intro">Organized services for home and shop visits.</p>
+          <div class="service-grid">
+            <article class="service-card">
+              <h3>Electrical Services</h3>
+              <ul>
+                <li>Wiring installation</li>
+                <li>Switchboard repair</li>
+                <li>MCB repair</li>
+                <li>Fan installation</li>
+                <li>Light fitting</li>
+                <li>Inverter installation</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <h3>AC Repair & Installation</h3>
+              <ul>
+                <li>Split / Window AC installation</li>
+                <li>AC uninstallation</li>
+                <li>Gas refill</li>
+                <li>Not cooling / leakage repair</li>
+                <li>PCB repair</li>
+                <li>Servicing & cleaning</li>
+                <li>AMC plans</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <h3>Refrigerator Repair</h3>
+              <ul>
+                <li>Not cooling repair</li>
+                <li>Gas charging</li>
+                <li>Compressor repair</li>
+                <li>Thermostat replacement</li>
+                <li>Door seal replacement</li>
+                <li>Single / double door service</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <h3>TV Installation & Repair</h3>
+              <ul>
+                <li>New LED / Smart TV installation</li>
+                <li>Wall mount setup</li>
+                <li>Bracket installation</li>
+                <li>TV signal setup</li>
+                <li>Power issue repair</li>
+                <li>Screen / panel repair</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="book-service">
+        <div class="container">
+          <h2>Book Service</h2>
+          <form class="card form-grid" id="booking-form">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Phone Number
+              <input type="tel" name="phone" required />
+            </label>
+            <label class="full">
+              Address
+              <textarea name="address" rows="2" required></textarea>
+            </label>
+            <label>
+              Service Type
+              <select name="service" required>
+                <option value="">Select</option>
+                <option>Electrical Work</option>
+                <option>AC Installation</option>
+                <option>AC Repair</option>
+                <option>Refrigerator Repair</option>
+                <option>TV Installation</option>
+                <option>TV Repair</option>
+              </select>
+            </label>
+            <label>
+              Preferred Date & Time
+              <input type="datetime-local" name="slot" required />
+            </label>
+            <label class="full">
+              Problem Description
+              <textarea name="problem" rows="3" required></textarea>
+            </label>
+            <label>
+              Upload Appliance Photo
+              <input type="file" name="photo" accept="image/*" />
+            </label>
+            <label>
+              Visit Option
+              <select name="visit" required>
+                <option>Home Visit</option>
+                <option>Shop Visit</option>
+              </select>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="emergency" /> Emergency Service Needed
+            </label>
+            <div class="full form-actions">
+              <button class="btn btn-primary" type="submit">Submit Booking</button>
+              <p id="booking-message" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <div class="feature-grid">
+            <article class="card">
+              <h3>Service Tracking</h3>
+              <p>Track your booking in real-time with your service ID.</p>
+              <div class="tracking">
+                <input type="text" id="track-id" placeholder="Enter service ID (e.g. SRV1234)" />
+                <button class="btn" id="track-btn" type="button">Track Status</button>
+              </div>
+              <p id="track-result"></p>
+            </article>
+            <article class="card">
+              <h3>Price Estimates</h3>
+              <p>Get an instant estimate before confirming your visit.</p>
+              <ul>
+                <li>Electrical jobs: ₹499 onwards</li>
+                <li>AC servicing: ₹699 onwards</li>
+                <li>Refrigerator repair: ₹599 onwards</li>
+                <li>TV installation: ₹499 onwards</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Payment Options</h3>
+              <p>Pay securely by UPI, card, or cash after service completion.</p>
+              <div class="pill-row"><span>UPI</span><span>Card</span><span>Cash</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="ask-question">
+        <div class="container two-col">
+          <div>
+            <h2>Ask a Question</h2>
+            <p>Need help before booking? Get free basic consultation.</p>
+            <a class="btn btn-whatsapp" href="https://wa.me/919876543210" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+          </div>
+          <form class="card" id="question-form">
+            <label>
+              Your Name
+              <input type="text" required />
+            </label>
+            <label>
+              Phone Number
+              <input type="tel" required />
+            </label>
+            <label>
+              Question
+              <textarea rows="4" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send Question</button>
+            <p id="question-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section alt" id="amc-plans">
+        <div class="container">
+          <h2>AMC Plans & Seasonal Offers</h2>
+          <div class="offer-grid">
+            <article class="card">
+              <h3>AC AMC Basic</h3>
+              <p>2 preventive services + priority support.</p>
+              <strong>₹1,999/year</strong>
+            </article>
+            <article class="card">
+              <h3>AC AMC Premium</h3>
+              <p>4 services, gas checkup, and discounted repairs.</p>
+              <strong>₹3,499/year</strong>
+            </article>
+            <article class="card">
+              <h3>Summer Offer</h3>
+              <p>Get 20% off AC servicing for limited time.</p>
+              <strong>Use code: COOL20</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reviews">
+        <div class="container">
+          <h2>Reviews & Testimonials</h2>
+          <div class="review-grid">
+            <article class="card review">
+              <p>★★★★★</p>
+              <p>“Quick AC repair done same day. Honest pricing and clean work.”</p>
+              <small>— Ankit S., Jhansi</small>
+            </article>
+            <article class="card review">
+              <p>★★★★★</p>
+              <p>“TV wall mount installation was perfect. Technician explained everything.”</p>
+              <small>— Priya M., Sipri</small>
+            </article>
+            <article class="card review">
+              <p>★★★★☆</p>
+              <p>“Refrigerator cooling issue solved in one visit. Recommended.”</p>
+              <small>— Rahul K., Medical Road</small>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="about">
+        <div class="container two-col">
+          <div>
+            <h2>About Us</h2>
+            <p>
+              With 10+ years of experience, our skilled technicians deliver fast and reliable service across
+              Jhansi and nearby areas using quality spare parts.
+            </p>
+          </div>
+          <ul class="about-points card">
+            <li>10+ years of practical experience</li>
+            <li>Coverage: Jhansi & nearby locations</li>
+            <li>Verified and skilled technicians</li>
+            <li>Fast response with emergency support</li>
+            <li>Quality spare parts with service assurance</li>
+            <li>Electrical safety inspection & annual plans</li>
+            <li>TV bracket, AC stabilizer, fridge stand add-ons</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div>
+          <h2>Contact</h2>
+          <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+          <p>WhatsApp: <a href="https://wa.me/919876543210">Message us</a></p>
+          <p>Email: <a href="mailto:support@doorsteprepairhub.in">support@doorsteprepairhub.in</a></p>
+          <p>Working Hours: 8:00 AM – 9:00 PM (All Days)</p>
+        </div>
+        <div>
+          <h3>Location</h3>
+          <p>Shop No. 12, Civil Lines, Jhansi, Uttar Pradesh</p>
+          <iframe
+            title="Google Map"
+            loading="lazy"
+            src="https://maps.google.com/maps?q=Jhansi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
